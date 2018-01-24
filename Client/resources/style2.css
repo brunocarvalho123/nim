@@ -1,0 +1,193 @@
+@charset "UTF-8";
+
+.alloptions{
+	top:27%;
+	text-align: center;
+	position: absolute;
+	width: 60%;
+	height: 70%;
+	font-size: 4vmin;
+	left: 20.5%;
+}
+
+.menuoptions{
+	text-align: center;
+	font-size: 170%;
+	-webkit-text-stroke: 1px #fcff96;
+	line-height: 1.5;
+}
+
+.menuIt:hover {
+	-webkit-text-stroke: 1px #d3d3d3;
+}
+
+#mpRank{
+	font-size: 24pt;
+	overflow: auto;
+}
+
+.authentification{
+	background-color:rgba(211,211,211, 0.2);
+	top:15%;
+	padding-top: 60px;
+	position: absolute;
+	width: 60%;
+	height: 60%;
+	font-size: 3.5vmin;
+	left: 20%;
+	display: none;
+}
+
+.singleplayer{
+	top:15%;
+	padding-top: 50px;
+	position: absolute;
+	width: 60%;
+	height: 70%;
+	font-size: 3.5vmin;
+	left: 20%;
+	display: none;
+}
+
+.inf {
+	word-spacing: 20pt;
+	font-size: 20pt;
+	text-align: center;
+}
+
+.input {
+	font-size: 14pt;
+}
+
+.button {
+  background: #d12e2e;
+  background-image: -webkit-linear-gradient(top, #d12e2e, #593636);
+  background-image: -moz-linear-gradient(top, #d12e2e, #593636);
+  background-image: -ms-linear-gradient(top, #d12e2e, #593636);
+  background-image: -o-linear-gradient(top, #d12e2e, #593636);
+  background-image: linear-gradient(to bottom, #d12e2e, #593636);
+  -webkit-border-radius: 6;
+  -moz-border-radius: 6;
+  border-radius: 6px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 1.75vmin;
+  padding: 7px 14px 7px 14px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #cccccc;
+  background-image: -webkit-linear-gradient(top, #cccccc, #5b5c54);
+  background-image: -moz-linear-gradient(top, #cccccc, #5b5c54);
+  background-image: -ms-linear-gradient(top, #cccccc, #5b5c54);
+  background-image: -o-linear-gradient(top, #cccccc, #5b5c54);
+  background-image: linear-gradient(to bottom, #cccccc, #5b5c54);
+  text-decoration: none;
+}
+
+#turn_mp2{
+	margin-top: -360px;
+	color:rgba(0, 0, 0, 0);
+	font-size: 30pt;
+	font-weight: bold;
+	-webkit-text-stroke: 0px #fcff96;
+}
+
+#turn_mp{
+	margin-top: -100px;
+	margin-bottom: 120px;
+	color:rgba(0, 0, 0, 0);
+	font-size: 26pt;
+	font-weight: bold;
+	-webkit-text-stroke: 0px #fcff96;
+}
+
+.helpB{
+	float:left;
+	margin-top: 32%;
+	margin-left: 2%;
+	line-height: 4;
+	display: none;
+}
+
+.setting{
+	background-color:rgba(211,211,211, 0.2);
+	text-align:left;
+	top:15%;
+	padding-top: 50px;
+	position: absolute;
+	padding-left: 60px;
+	width: 55%;
+	height: 60%;
+	font-size: 2.5vmin;
+	left: 18%;
+	display: none;
+}
+
+.nm{
+	font-size: 2.5vmin;
+}
+
+.scores{
+	background-color:rgba(211,211,211, 0.2);
+	text-align: center;
+	top:15%;
+	padding-top: 50px;
+	position: absolute;
+	width: 60%;
+	height: 70%;
+	left: 20%;
+	font-size: 3.5vmin;
+	display: none;
+}
+
+.instructions{
+	background-color:rgba(211,211,211, 0.2);
+	top:10%;
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	font-size: 3vmin;
+	left: 15%;
+	display: none;
+}
+
+.instructions2{
+	background-color:rgba(211,211,211, 0.8);
+	top:10%;
+	position: absolute;
+	width: 70%;
+	height: 70%;
+	font-size: 3vmin;
+	left: 15%;
+	display: none;
+}
+
+.instructions p {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.stack{
+	word-spacing: 19.5px;
+}
+
+.butonsSettings{
+	word-spacing: 20px;
+	margin-left: 32%;
+}
+
+.ti {
+	text-align: center;
+}
+
+.mode{
+	line-height:150%;
+}
+
+.modeoptions {
+	font-size: 3.5vmin;
+}

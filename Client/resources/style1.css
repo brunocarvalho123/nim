@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body{
+	margin-right: 45px;
+	margin-left: 45px;
+	font-size: 16px;
+	font-family: Helvetica;
+	background-color: #99c199;
+	background-image: url("https://i.gyazo.com/fcfc075aab3fa16eab64575fed97a214.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	margin-top: 4%;
+	text-align: center;
+	background-size: cover;
+}
+
+.match{
+	height:70%;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.tabuleiro{
+	position: absolute;
+ 	top: 0%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	display: none;
+}
+.r1{
+	position: relative;
+	text-align:center;
+	width:100%;
+	height:25%;
+	margin: auto;
+	margin-top: 0%;
+}

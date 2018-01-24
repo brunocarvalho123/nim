@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="./resources/script1.js"></script>
+		<link rel="stylesheet" href="./resources/style1.css" type="text/css">
+		<link rel="icon" href="https://i.gyazo.com/e360fcbd27071dfcbf0e200cb5600c4b.png" type="image/png">
+		<link type="text/css" rel="stylesheet" href="./resources/style2.css"/>
+		<script type="text/javascript" src = "./resources/script2.js"></script>
+		<script type="text/javascript" src = "./resources/script3.js"></script>
+		<meta charset="UTF-8">
+		<title>NIM</title>
+	</head>
+<body>
+	<h1><img src="https://i.gyazo.com/f1bdceed908df4bf74318c8264dabc08.png" height=190 alt="Erro"  id="h" onclick="Home()"></h1>
+
+	 <!-- MAIN MENU -->
+    <div class="alloptions" id="alloptions">
+    	<div id="menuoptions" class="menuoptions">
+			<b>
+			<br><span id="oneplayer" class="menuIt" onclick="Oneplayer(),setup()"> Singleplayer </span><br>
+			<span id="twoplayers" class="menuIt" onclick="Authent()"> Multiplayer </span><br>
+			<span id="settings" class="menuIt" onclick="Settings()"> Settings </span><br>
+			<span id="scores2" class="menuIt" onclick="Scores()"> Scores </span><br>
+			<span id="help" class="menuIt" onclick="Help()"> Help </span><br>
+			</b>
+		 </div>
+
+		<!-- SCORE TABLE -->
+		<div id="scores" class="scores">
+			<table style="width:100%">
+			  <tr>
+					<th>Rows</th>
+			    <th id="user1">Player</th>
+			    <th id="user2">Com</th>
+			  </tr>
+			  <tr>
+					<td>4</td>
+			    <td id="u4">0</td>
+			    <td id="b4">0</td>
+			  </tr>
+				<tr>
+				 <td>5</td>
+				 <td id="u5">0</td>
+				 <td id="b5">0</td>
+			 </tr>
+			 <tr>
+				 <td>6</td>
+				 <td id="u6">0</td>
+				 <td id="b6">0</td>
+			 </tr>
+			 <tr>
+				 <td>7</td>
+				 <td id="u7">0</td>
+				 <td id="b7">0</td>
+			 </tr>
+			 <tr>
+				 <td>8</td>
+				 <td id="u8">0</td>
+				 <td id="b8">0</td>
+			 </tr>
+			 <tr>
+				 <td>9</td>
+				 <td id="u9">0</td>
+				 <td id="b9">0</td>
+			 </tr>
+			 <tr>
+				 <td>10</td>
+				 <td id="u10">0</td>
+				 <td id="b10">0</td>
+			 </tr>
+		 </table>
+		 <br>
+		 <input type="button" class="button" value="Back" onclick="BackFromScore();">
+		</div>
+
+		<!-- MULTIPLAYER -->
+		<div id="authentification" class="authentification">
+			<div id="inf" class="inf">
+				<form name="login" method="post">
+					Username:
+					<input name="username" id="mp_name" size="14" class="input"/><br><br>
+					Password:
+					<input name="password" id="mp_pass" type="password" size="14" class="input" /><br><br><br>
+					<input type="button" class="button" value="SignUp" onclick="register();">
+					<input type="button" class="button" value="Back" onclick="BackFromAutentification();"><br><br>
+					<input type="button" class="button" value="Already have acc" onclick="JoinG();">
+					<input type="button" class="button" value="MP ranking" onclick="mp_rank();">
+				</form>
+				<br />
+			</div>
+		</div>
+
+		<!-- JOIN MENU -->
+		<div id="joing" class="authentification">
+			<div id="inf2" class="inf">
+				<form name="login" method="post">
+					Group:
+					<input name="group" id="mp_group" size="14" class="input"/><br><br>
+					Username:
+					<input name="username" id="mp_name2" size="14" class="input"/><br><br>
+					Password:
+					<input name="password" id="mp_pass2" type="password" size="14" class="input" /><br><br>
+					Size:
+					<input type="range" min="4" max="10" id="mp_range" onchange="updateTextInputj(this.value);">
+					<input type="text" class=ti id="textInputj" size="2" value="7"> <br><br><br>
+					<input type="button" class="button" value="Join game" onclick="join();">
+					<input type="button" class="button" value="Back" onclick="BackFromJoin();">
+				</form>
+				<br />
+			</div>
+		</div>
+
+		<!-- MP RANKING -->
+		<div id="mpRank" class="authentification">
+			<table style="width:100%" id="table_mp">
+			</table>
+			<input type="button" class="button" value="Back" onclick="BackFromMPRank();">
+		</div>
+
+		<!-- WAIT -->
+		<div id="wait" class="authentification">
+			<h2> Looking for an opponent... </h2>
+			<script type="text/javascript">
+					var cog = new Image();
+					function init() {
+							cog.src='https://i.gyazo.com/649a45fe85760c6fe652cdcc0081a130.png';
+							setInterval(draw,10);
+					}
+					var rotation = 0;
+					function draw(){
+							var ctx = document.getElementById('myCanvas').getContext('2d');
+							ctx.globalCompositeOperation = 'destination-over';
+							ctx.save();
+							ctx.clearRect(0,0,100,100);
+							ctx.translate(50,50);
+							rotation +=1;
+							ctx.rotate(rotation*Math.PI/100);
+							ctx.drawImage(cog, -(100/2), -(100/2), 100, 100);
+							ctx.restore();
+					}
+					init();
+			</script>
+			<canvas id="myCanvas" width="100px" height="100px"></canvas><br><br>
+			<input type="button" class="button" value="Back" onclick="LeaveWait();">
+		</div>
+
+		<!-- SINGLEPLAYER -->
+		<div class=tabuleiro id="d1"></div>
+
+		<!-- SETTINGS -->
+		<div id="setting" class="setting">
+			<div id="stack" class="stack"><b>Rows:</b>
+				<input type="range" min="4" max="10" id="range1" onchange="updateTextInput1(this.value);">
+				<input type="text" class=ti id="textInput1" size="2" value="7">
+			</div>
+			<div id="difficulty" class="difficulty"><b>Difficulty: </b>
+				<input type="range" min="1" max="3" id="range2" onchange="updateTextInput2(this.value);">
+				<input type="text" class=ti id="textInput2" size="2" value="2"><br>
+			</div><br>
+			<div id="mode_ai" class="mode"><b> Mode:</b>
+				<form>
+					<div id="mode_ai_options" class="modeoptions">
+					    <input type="radio"  name="play" value="normal"  id="normalmode_ai" class="normalmode">
+					    <span id="nm_ai" class="nm">Player vs Com</span><br>
+						<input type="radio" name="play"  value="instead"  id="insteadmode_ai" class="insteadmode" >
+						<span id="im_ai" class="nm">Player vs Player</span>
+					</div>
+				</form>
+			</div>
+			<div id="mode" class="mode"><b> Who goes first:</b>
+				<form>
+					<div id="modeoptions" class="modeoptions">
+					    <input type="radio"  name="play" value="normal"  id="normalmode" class="normalmode">
+					    <span id="nm" class="nm">User</span><br>
+						<input type="radio" name="play"  value="instead"  id="insteadmode" class="insteadmode" >
+						<span id="im" class="nm">Com</span>
+					</div>
+				</form>
+			</div>
+			<div id="butonsSettings" class="butonsSettings">
+				<br><input type="button" id="savechanges" class="button" value="Save" onclick="settings()">
+				<input type="button" class="button" value="Back" onclick="BackFromSettings();">
+			</div>
+		</div>
+
+		<!-- HELP -->
+		<div id="instructions" class="instructions">
+			<h3>Instructions</h3>
+			<p> NIM starts with rows of objects</p>
+			<p> Players take turns taking any number of objects from one of the rows </p>
+			<p> The last player to remove an object wins </p>
+			<p> Adjust the difficulty and the size of the board by going to the settings</p>
+			<button class="button" value="Back" onclick="GoBack();"> Back </button>
+		</div>
+
+		<div id="instructions2" class="instructions2">
+			<h3>Instructions</h3>
+			<p> NIM starts with rows of objects</p>
+			<p> Players take turns taking any number of objects from one of the rows </p>
+			<p> The last player to remove an object wins </p>
+			<p> Adjust the difficulty and the size of the board by going to the settings</p>
+			<button class="button" value="Back" onclick="GoBack2();"> Back </button>
+		</div>
+
+	</div>
+
+	<div id="helpB" class="helpB">
+		<p id="turn_mp2">Turn:</p>
+		<p id="turn_mp">TESTE</p>
+		<button class="button" value="help" onclick="Help2();"> Help </button><br>
+		<button class="button" value="help" onclick="BackFromBoard();"> Back </button>
+	</div>
+
+</body>
+</html>
